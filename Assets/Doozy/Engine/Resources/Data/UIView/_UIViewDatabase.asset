@@ -17,6 +17,8 @@ MonoBehaviour:
   - Custom
   - Example
   - General
+  - Templates
   Categories:
   - {fileID: 11400000, guid: b01e98f4801f7124ba39e1dac4debf90, type: 2}
   - {fileID: 11400000, guid: 3eff3fda70983a44780215e079f10c73, type: 2}
+  - {fileID: 11400000, guid: 778974023faf93c4c8c84e008a571cb5, type: 2}

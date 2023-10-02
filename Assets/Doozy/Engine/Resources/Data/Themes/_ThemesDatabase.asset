@@ -13,6 +13,16 @@ MonoBehaviour:
   m_Name: _ThemesDatabase
   m_EditorClassIdentifier: 
   ThemesNames:
+  - Black and Green
+  - Blue and White
+  - Blue, Yellow and White
   - General
+  - Orange and White
+  - Red and Black
   Themes:
   - {fileID: 11400000, guid: 7043eb54700b1174d80bce2fbd9ca3d4, type: 2}
+  - {fileID: 11400000, guid: d4ab70058f4d5fc4989d34e76c2609b8, type: 2}
+  - {fileID: 11400000, guid: 199d3ba79f1de9040986eb637b16085e, type: 2}
+  - {fileID: 11400000, guid: a0dd10e46fa1aa84196826edd75d0db5, type: 2}
+  - {fileID: 11400000, guid: 0b386f3496fd3414695cb935a1317fd1, type: 2}
+  - {fileID: 11400000, guid: ebfb6f80a6fa6924ab76b87ee60ebacc, type: 2}

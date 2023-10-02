@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a151aae416b497c9eaea8aa5ac1c555, type: 3}
+  m_Name: Theme_Black and Green
+  m_EditorClassIdentifier: 
+  m_themeName: Black and Green
+  SerializedGuid: 0b123bc299c93b4f815bde596a8e0e60
+  m_activeVariant:
+    m_variantName: Default
+    SerializedGuid: 936b8d9689a95f4eacfd1a904e39c57a
+    Colors:
+    - m_color: {r: 0.10196079, g: 0.10196079, b: 0.10196079, a: 1}
+      SerializedGuid: c071b66ae126f842887d8bd011bcfdaa
+    - m_color: {r: 0.16862746, g: 0.8313726, b: 0.60784316, a: 1}
+      SerializedGuid: 477fd302bee97542a679fcc21230cbcd
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: e2cb1541ca012747aa3344ae70e29704
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: 176b4a32daec7f4e829a177b67377832
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: 2565c59c9f351e4ea60f6b5f97ce7b3a
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: aecd1a0c455f5847a09a4a87ca20eed0
+    Sprites: []
+    Textures: []
+    Fonts: []
+    FontAssets: []
+  ColorLabels:
+  - m_label: Primary
+    SerializedGuid: c071b66ae126f842887d8bd011bcfdaa
+  - m_label: Secondary
+    SerializedGuid: 477fd302bee97542a679fcc21230cbcd
+  - m_label: Accent 1
+    SerializedGuid: e2cb1541ca012747aa3344ae70e29704
+  - m_label: Accent 2
+    SerializedGuid: 176b4a32daec7f4e829a177b67377832
+  - m_label: Text
+    SerializedGuid: 2565c59c9f351e4ea60f6b5f97ce7b3a
+  - m_label: Disabled
+    SerializedGuid: aecd1a0c455f5847a09a4a87ca20eed0
+  SpriteLabels: []
+  TextureLabels: []
+  FontLabels:
+  - m_label: Unnamed Property
+    SerializedGuid: a674d55d59fa8649a4efee81716b8860
+  FontAssetLabels: []
+  VariantsNames:
+  - Default
+  Variants:
+  - m_variantName: Default
+    SerializedGuid: 936b8d9689a95f4eacfd1a904e39c57a
+    Colors:
+    - m_color: {r: 0.10196079, g: 0.10196079, b: 0.10196079, a: 1}
+      SerializedGuid: c071b66ae126f842887d8bd011bcfdaa
+    - m_color: {r: 0.16862746, g: 0.8313726, b: 0.60784316, a: 1}
+      SerializedGuid: 477fd302bee97542a679fcc21230cbcd
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: e2cb1541ca012747aa3344ae70e29704
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: 176b4a32daec7f4e829a177b67377832
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: 2565c59c9f351e4ea60f6b5f97ce7b3a
+    - m_color: {r: 1, g: 1, b: 1, a: 1}
+      SerializedGuid: aecd1a0c455f5847a09a4a87ca20eed0
+    Sprites: []
+    Textures: []
+    Fonts: []
+    FontAssets: []
