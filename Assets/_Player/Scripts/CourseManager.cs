@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Linq;
 
 public class CourseManager : MonoBehaviour
 {
-
     public Course course;
+    public CourseSections section;
+    public string titleSearch = "Introducción.";
 
     private void Start()
     {
+        //Llama el url de la api - por pruebas de momento esta asi 
         StartCoroutine(LoadCourseCoroutine("https://sophie-qa-api.azurewebsites.net/api/Courses/fac5b047-fbd8-4728-9a71-b316a241f2ac"));
     }
 
+    //metodo para convertirn json en class course
     public void LoadCourseFromJSON(string jsonText)
     {
         course = JsonUtility.FromJson<Course>(jsonText);
     }
 
+    //corrutina que llama a la api para buscar la data
     private IEnumerator LoadCourseCoroutine(string apiUrl)
     {
         using (UnityWebRequest webRequest = UnityWebRequest.Get(apiUrl))
@@ -33,277 +38,279 @@ public class CourseManager : MonoBehaviour
             else
             {
                 string jsonText = webRequest.downloadHandler.text;
-                Debug.Log(jsonText);
+                //metodo para json a class course
                 LoadCourseFromJSON(jsonText);
+                //captura en variable la seccion (un contenido del curso) 
+                section = course.sections.FirstOrDefault(s => s.title == titleSearch);
+                //captura el contenido de esa presentacion
+                ParagraphsManager p = GetComponent<ParagraphsManager>();
+                p.paragraphs = section.elements[0].elementLesson.paragraphs;
+                //llena los items que se van a usar para la presentacion en el reproductor
+                p.fill();
             }
         }
     }
 }
 
+//estructura de curso
+
 [System.Serializable]
 public class Course
 {
-    public string _id { get; set; }
-    public string code { get; set; }
-    public string organizationCode { get; set; }
-    public string author_code { get; set; }
-    public string approvalStatus { get; set; }
-    public string dateCreated { get; set; }
-    public string language { get; set; }
-    public string languageName { get; set; }
-    public string lessonTheme { get; set; }
-    public string voice { get; set; }
-    public Details details { get; set; }
-    public CourseSections[] sections { get; set; }
-    public string createdBy { get; set; }
-    public string company { get; set; }
-    public CourseDetails course { get; set; }
-    public CourseProgress courseProgress { get; set; }
-    public string email { get; set; }
-    public object group { get; set; }
-    public string groupCode { get; set; }
-    public object groupUser { get; set; }
-    public object last_access { get; set; }
-    public string last_course_accessed { get; set; }
-    public string name { get; set; }
-    public string password { get; set; }
-    public string phone { get; set; }
-    public string position { get; set; }
-    public Progress progress { get; set; }
-    public string role { get; set; }
-    public string status { get; set; }
-    public string avatarIntroUrl { get; set; }
-    public object[] quizScores { get; set; }
+    public string _id;
+    public string code;
+    public string organizationCode;
+    public string author_code;
+    public string approvalStatus;
+    public string dateCreated;
+    public string language;
+    public string lessonTheme;
+    public Details details;
+    public CourseSections[] sections;
+    public string languageName;
+    public string voice;
+    public string approvedBy;
+    public string duration;
+    public string createdBy;
 }
 
 [System.Serializable]
 public class Details
 {
-    public string title { get; set; }
-    public string summary { get; set; }
-    public string[] categories { get; set; }
-    public string cover { get; set; }
-    public string longSummary { get; set; }
+    public string title;
+    public string summary;
+    public string[] categories;
+    public string cover;
 }
 
 [System.Serializable]
 public class CourseSections
 {
-    public string title { get; set; }
-    public MultiElement[] elements { get; set; }
+    public string title;
+    public MultiElement[] elements;
 }
 
 [System.Serializable]
 public class MultiElement
 {
-    public string type { get; set; }
-    public string title { get; set; }
-    public string elementCode { get; set; }
-    public string quizCode { get; set; }
-    public ElementLesson elementLesson { get; set; }
-    public ElementVideo elementVideo { get; set; }
-    public ElementQuiz elementQuiz { get; set; }
-    public ElementHtml elementText { get; set; }
-    public ElementFile elementFile { get; set; }
+    public string type;
+    public string title;
+    public string elementCode;
+    public string quizCode;
+    public ElementLesson elementLesson;
+    public ElementVideo elementVideo;
+    public ElementQuiz elementQuiz;
+    public ElementHtml elementText;
+    public ElementFile elementFile;
 }
 
 [System.Serializable]
 public class ElementLesson
 {
-    public string lessonTheme { get; set; }
-    public SlideInterface[] paragraphs { get; set; }
+    public string lessonTheme;
+    public Paragraphs[] paragraphs;
 }
 
 [System.Serializable]
 public class ElementHtml
 {
-    public string title { get; set; }
-    public string cover { get; set; }
-    public string content { get; set; }
+    public string title;
+    public string cover;
+    public string content;
 }
 
 [System.Serializable]
 public class ElementVideo
 {
-    public string url { get; set; }
+    public string url;
 }
 
 [System.Serializable]
 public class ElementQuiz
 {
-    public object[] quizz_list { get; set; }
-    public bool isAICreated { get; set; }
+    public object[] quizz_list;
+    public bool isAICreated;
 }
 
 [System.Serializable]
 public class ItemQuizz
 {
-    public string code { get; set; }
-    public string question { get; set; }
-    public int order { get; set; }
-    public int answer { get; set; }
-    public string[] distractors { get; set; }
+    public string code;
+    public string question;
+    public int order;
+    public int answer;
+    public string[] distractors;
 }
 
 [System.Serializable]
 public class ElementFile
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
 [System.Serializable]
-public class SlideInterface
+public class Paragraphs
 {
-    public string content { get; set; }
-    public string audioUrl { get; set; }
-    public object[] splitAudioScript { get; set; }
-    public string audioScript { get; set; }
-    public Srt[] srt { get; set; }
-    public string[] keyPhrases { get; set; }
-    public string titleAI { get; set; }
-    public AlternativePronunciationInterface[] alternativePronunciations { get; set; }
-    public ImageData imageData { get; set; }
-    public VideoData videoData { get; set; }
+    public string content;
+    public string audioUrl;
+    public object[] splitAudioScript;
+    public string audioScript;
+    public Srt[] srt;
+    public string[] keyPhrases;
+    public string titleAI;
+    public AlternativePronunciations[] alternativePronunciations;
+    public ImageData imageData;
+    public VideoData videoData;
 }
 
 [System.Serializable]
 public class Srt
 {
-    public double start_time { get; set; }
-    public string text { get; set; }
+    public double start_time;
+    public string text;
 }
 
 [System.Serializable]
-public class AlternativePronunciationInterface
+public class AlternativePronunciations
 {
-    public string source { get; set; }
-    public string pronunciation { get; set; }
+    public string source;
+    public string pronunciation;
 }
 
 [System.Serializable]
 public class CourseDetails
 {
-    public string approvalStatus { get; set; }
-    public string approvedBy { get; set; }
-    public string author_code { get; set; }
-    public string buildingStatus { get; set; }
-    public string code { get; set; }
-    public string dateCreated { get; set; }
-    public Details details { get; set; }
-    public string organizationCode { get; set; }
-    public string organization_code { get; set; }
-    public object[] sections { get; set; }
+    public string approvalStatus;
+    public string approvedBy;
+    public string author_code;
+    public string buildingStatus;
+    public string code;
+    public string dateCreated;
+    public Details details;
+    public string organizationCode;
+    public string organization_code;
+    public object[] sections;
 }
 
 [System.Serializable]
 public class CourseProgress
 {
-    public double averageScore { get; set; }
-    public int completedSections { get; set; }
-    public double percentage { get; set; }
-    public string status { get; set; }
-    public string totalSections { get; set; }
+    public double averageScore;
+    public int completedSections;
+    public double percentage;
+    public string status;
+    public string totalSections;
 }
 
 [System.Serializable]
 public class Progress
 {
-    public string _id { get; set; }
-    public string courseCode { get; set; }
-    public string userCode { get; set; }
-    public object progress { get; set; }
+    public string _id;
+    public string courseCode;
+    public string userCode;
+    public object progress;
 }
 
 [System.Serializable]
 public class ImageData
 {
-    public Thumb thumb { get; set; }
-    public FinalImage finalImage { get; set; }
-    public string urlBing { get; set; }
+    public Image2 image;
+    public Thumb thumb;
+    public FinalImage finalImage;
+    public string urlBing;
+}
+
+[System.Serializable]
+public class Image2
+{
+    public string url;
+    public int width;
+    public int height;
+    public string imageId;
 }
 
 [System.Serializable]
 public class Thumb
 {
-    public string url { get; set; }
-    public int width { get; set; }
-    public int height { get; set; }
+    public string url;
+    public int width;
+    public int height;
 }
 
 [System.Serializable]
 public class FinalImage
 {
-    public string url { get; set; }
+    public string url;
 }
 
 [System.Serializable]
 public class VideoData
 {
-    public FinalVideo finalVideo { get; set; }
+    public FinalVideo finalVideo;
 }
 
 [System.Serializable]
 public class FinalVideo
 {
-    public string url { get; set; }
+    public string url;
 }
 
 [System.Serializable]
 public class ContentGeneratedByStructureInterface
 {
-    public string context { get; set; }
-    public string key { get; set; }
-    public string text { get; set; }
-    public string title { get; set; }
-    public int[] index { get; set; }
+    public string context;
+    public string key;
+    public string text;
+    public string title;
+    public int[] index;
 }
 
 [System.Serializable]
 public class SimpleContentOutput
 {
-    public Content[] content { get; set; }
-    public int[] index { get; set; }
+    public Content[] content;
+    public int[] index;
 }
 
 [System.Serializable]
 public class Content
 {
-    public string title { get; set; }
-    public string text { get; set; }
+    public string title;
+    public string text;
 }
 
 [System.Serializable]
 public class CourseTracking
 {
-    public int textsOk { get; set; }
-    public int textsErr { get; set; }
-    public int audiosOk { get; set; }
-    public int audiosErr { get; set; }
-    public int imagesOk { get; set; }
-    public int imagesErr { get; set; }
-    public int keysOk { get; set; }
-    public int keysErr { get; set; }
-    public Section section { get; set; }
-    public string[] paragraphs { get; set; }
+    public int textsOk;
+    public int textsErr;
+    public int audiosOk;
+    public int audiosErr;
+    public int imagesOk;
+    public int imagesErr;
+    public int keysOk;
+    public int keysErr;
+    public Section section;
+    public string[] paragraphs;
 }
 
 [System.Serializable]
 public class Section
 {
-    public string code { get; set; }
-    public string title { get; set; }
+    public string code;
+    public string title;
 }
 
 [System.Serializable]
 public class TimelineObject
 {
-    public string keyword { get; set; }
-    public int delay { get; set; }
-    public int duration { get; set; }
-    public string fontColor { get; set; }
-    public int fontSize { get; set; }
-    public string inEffect { get; set; }
-    public string outEffect { get; set; }
+    public string keyword;
+    public int delay;
+    public int duration;
+    public string fontColor;
+    public int fontSize;
+    public string inEffect;
+    public string outEffect;
 }
 
