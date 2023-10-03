@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Doozy\Engine\UI\UIView\UIView.cs" />
-    <Compile Include="Assets\_Player\Scripts\CourseManager.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\MenuUtils.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupSettings.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Input\KeyToAction.cs" />
@@ -91,7 +90,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Doozy\Engine\Enums\SystemGameEvent.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\SpriteTargetSelectable.cs" />
-    <Compile Include="Assets\_Player\Scripts\ParagraphsManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\PlaySound.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIView\Enums\UIViewBehaviorType.cs" />
@@ -191,7 +189,6 @@
     <Compile Include="Assets\Doozy\Engine\Nody\Models\Graph.cs" />
     <Compile Include="Assets\Doozy\Examples\Scripts\E11PopupScriptOne.cs" />
     <Compile Include="Assets\Doozy\Examples\Scripts\UIButtonAutomatedTextValue.cs" />
-    <Compile Include="Assets\_Player\Scripts\AudioPhrases.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopup.cs" />
     <Compile Include="Assets\Doozy\Engine\SceneManagement\SceneDirector.cs" />
@@ -213,6 +210,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleMessage.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewMessage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\_Player\Scripts\Data\ParagraphsManager.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Nodes\LoadSceneNode.cs" />
     <Compile Include="Assets\Doozy\Engine\Touchy\CardinalDirection.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -289,7 +287,6 @@
     <Compile Include="Assets\Doozy\Engine\SceneManagement\Enums\GetSceneBy.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\AssetUtils.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Nodes\SwitchBackNode.cs" />
-    <Compile Include="Assets\_Player\Scripts\Phrases.cs" />
     <Compile Include="Assets\Doozy\Engine\Scripts\Message.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\UIDrawerContainer.cs" />
     <Compile Include="Assets\Doozy\Engine\Events\TextureEvent.cs" />
@@ -306,8 +303,8 @@
     <Compile Include="Assets\Doozy\Engine\Progress\Events\ProgressEvent.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Animation\UIAnimation.cs" />
     <Compile Include="Assets\Doozy\Examples\Scripts\E11PopupScriptThree.cs" />
+    <Compile Include="Assets\_Player\Scripts\Data\CourseManager.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Nodes\ThemeNode.cs" />
-    <Compile Include="Assets\_Player\Scripts\ImagePhrases.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\ThemeVariantData.cs" />
     <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAction.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\DataUtils.cs" />
@@ -338,8 +335,10 @@
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\StopAllSounds.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\SpriteTargetUnityEvent.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\ThemesSettings.cs" />
+    <Compile Include="Assets\_Player\Scripts\Data\Presentation.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetTextMeshPro.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UICanvas\UICanvasSettings.cs" />
+    <Compile Include="Assets\_Player\Scripts\Data\PlayerManager.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupContentData.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Models\Socket.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupQueueData.cs" />
@@ -1069,9 +1068,6 @@
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>

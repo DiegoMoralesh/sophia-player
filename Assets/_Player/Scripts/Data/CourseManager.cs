@@ -46,7 +46,7 @@ public class CourseManager : MonoBehaviour
                 ParagraphsManager p = GetComponent<ParagraphsManager>();
                 p.paragraphs = section.elements[0].elementLesson.paragraphs;
                 //llena los items que se van a usar para la presentacion en el reproductor
-                p.fill();
+                StartCoroutine(p.fill());
             }
         }
     }
