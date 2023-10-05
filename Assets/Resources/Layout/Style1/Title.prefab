@@ -1032,7 +1032,6 @@ GameObject:
   - component: {fileID: 3058489360009383378}
   - component: {fileID: 5791691519199705570}
   - component: {fileID: 7431046531542148377}
-  - component: {fileID: 2594184847103909204}
   m_Layer: 0
   m_Name: Picture
   m_TagString: Untagged
@@ -1097,24 +1096,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2594184847103909204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5659419084658596765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54cf8c4b916540e6abe8991db870c45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ThemeIdSerializedGuid: 5b4c39953e708b47828f76d51faa129f
-  VariantIdSerializedGuid: 
-  PropertyIdSerializedGuid: df659658dfbc384086b207e9555a7c2e
-  Image: {fileID: 7431046531542148377}
-  OverrideAlpha: 0
-  Alpha: 0
 --- !u!1 &5880453704973183354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1107,7 @@ GameObject:
   - component: {fileID: 4360572791174105568}
   - component: {fileID: 2789968429897616788}
   - component: {fileID: 7806282465891290472}
-  - component: {fileID: 742365430796329757}
+  - component: {fileID: 3264900623176133951}
   m_Layer: 0
   m_Name: MainText
   m_TagString: Untagged
@@ -1250,7 +1231,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &742365430796329757
+--- !u!114 &3264900623176133951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1259,12 +1240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5880453704973183354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88e67b0de094067b124675f79f13976, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fbc545f68e351a4c9d65391bf2ef2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThemeIdSerializedGuid: 5b4c39953e708b47828f76d51faa129f
-  VariantIdSerializedGuid: 
-  PropertyIdSerializedGuid: 783a1d9c40000a47b807b0547faa0ab2
-  Text: {fileID: 0}
-  OverrideAlpha: 0
-  Alpha: 0
+  color: 2

@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class FontThemeTarget : MonoBehaviour
+namespace SophiaPlayer
 {
-    public SlideThemeManager.TargetEnum color;
-    private  TMP_Text text;
-   
-    // Start is called before the first frame update
-    void Start()
+    public class FontThemeTarget : MonoBehaviour
     {
-        text = GetComponent<TMP_Text>();
-    }
+        public ThemeManager.TargetEnum color;
+        private TMP_Text text;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            text = GetComponent<TMP_Text>();
+        }
 
-    public void setFont( TMP_FontAsset font, Color color)
-    {
-        text.font = font;
-        text.color = color;
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void setFont(TMP_FontAsset font, Color color)
+        {
+            text.font = font;
+            text.color = color;
+        }
     }
 }
