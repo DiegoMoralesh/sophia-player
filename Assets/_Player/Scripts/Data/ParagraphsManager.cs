@@ -23,7 +23,7 @@ public class ParagraphsManager : MonoBehaviour
 
         for (int i = 0; i < paragraphs.Length; i++)
         {
-            Slide slide = new Slide();
+            SlideData slide = new SlideData();
             StartCoroutine(getImageFromUrl(paragraphs[i].imageData.finalImage.url));
             yield return StartCoroutine(getAudioFromUrl(paragraphs[i].audioUrl));
             slide.content = paragraphs[i].content;
@@ -35,7 +35,7 @@ public class ParagraphsManager : MonoBehaviour
             slide.layout = "";
             slide.color = "";
 
-            slides.Add(slideData);
+            slides.Add(slide);
         }
 
         player.ready = true;
