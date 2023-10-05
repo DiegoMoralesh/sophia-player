@@ -23,14 +23,13 @@ public class ParagraphsManager : MonoBehaviour
         for (int i = 0; i < paragraphs.Length; i++)
         {
             Slide slide = new Slide();
+            StartCoroutine(getImageFromUrl(paragraphs[i].imageData.finalImage.url));
+            yield return StartCoroutine(getAudioFromUrl(paragraphs[i].audioUrl));
             slide.content = paragraphs[i].content;
             slide.keyPhrase = paragraphs[i].keyPhrases;
             slide.srt = paragraphs[i].srt;
-            yield return StartCoroutine(getImageFromUrl(paragraphs[i].imageData.finalImage.url));
             slide.image = auxSprite;
-            yield return StartCoroutine(getAudioFromUrl(paragraphs[i].audioUrl));
             slide.audio = auxAudio;
-
             slide.style = "";
             slide.layout = "";
             slide.color = "";
