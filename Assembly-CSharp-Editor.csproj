@@ -172,8 +172,8 @@
     <Compile Include="Assets\Doozy\Editor\Settings\DoozyWindowSettings.cs" />
     <Compile Include="Assets\Doozy\Editor\Nody\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\RadioButton.cs" />
-    <Compile Include="Assets\Doozy\Editor\Nody\Windows\NodyWindowActions.cs" />
     <Compile Include="Assets\Doozy\Editor\Orientation\OrientationDetectorEditor.cs" />
+    <Compile Include="Assets\Doozy\Editor\Nody\Windows\NodyWindowActions.cs" />
     <Compile Include="Assets\Doozy\Editor\Nody\Windows\NodyWindowDraw.cs" />
     <Compile Include="Assets\Doozy\Editor\Internal\DPropertyRelative.cs" />
     <Compile Include="Assets\Doozy\Editor\Soundy\SoundyManagerEditor.cs" />

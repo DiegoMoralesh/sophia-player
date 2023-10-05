@@ -95,6 +95,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\UIView\Enums\UIViewBehaviorType.cs" />
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\PauseAllSounds.cs" />
     <Compile Include="Assets\Doozy\Engine\Touchy\TouchDetector.cs" />
+    <Compile Include="Assets\_Player\Scripts\FontThemeTarget.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Nodes\StartNode.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Models\Connection.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -154,11 +155,14 @@
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\FontTargetText.cs" />
     <Compile Include="Assets\Doozy\Engine\Layouts\RadialLayout.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Animation\AnimationClasses.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\AdvancedReflection\ReflectionItem.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\CMY.cs" />
+    <Compile Include="Assets\_Player\Scripts\ThemeManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Animation\Enums\ButtonLoopAnimationType.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Nodes\RandomNode.cs" />
     <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\LoadScene.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\AdvancedReflection\ReflectionExtensions.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\ThemeTarget.cs" />
     <Compile Include="Assets\Doozy\Engine\Attributes\MinMaxRangeAttribute.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Nodes\ExitNode.cs" />
@@ -172,6 +176,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\Animation\UIAnimationsDatabase.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIView\Enums\UIViewStartBehavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\_Player\Scripts\Data\PlayerManagerPrueba.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\DoozyExecutionOrder.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\ThemeManager.cs" />
     <Compile Include="Assets\Doozy\Engine\Scripts\GameEventManager.cs" />
@@ -200,6 +205,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\Animation\Enums\AnimationAction.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\ThemesDatabase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\_Player\Scripts\ColorTheme.cs" />
     <Compile Include="Assets\Doozy\Engine\Orientation\OrientationDetector.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\UIDrawerMessage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
@@ -211,6 +217,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewMessage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\_Player\Scripts\Data\ParagraphsManager.cs" />
+    <Compile Include="Assets\_Player\Scripts\ColorThemeTarget.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Nodes\LoadSceneNode.cs" />
     <Compile Include="Assets\Doozy\Engine\Touchy\CardinalDirection.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -218,6 +225,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\Input\KeyToGameEvent.cs" />
     <Compile Include="Assets\Doozy\Engine\Events\AnimatorEvent.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Enums\TargetLabel.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\AdvancedReflection\SerializedPropertyExtensions.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\UnityResources.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Scripts\NodySettings.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\TextureTargetRawImage.cs" />
@@ -260,6 +268,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewSettings.cs" />
     <Compile Include="Assets\Doozy\Engine\Extensions\ClassUtils.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\UIDrawerListener.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\AdvancedReflection\ReflectionSystem.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Animation\Enums\AnimationType.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetSelectable.cs" />
     <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAnimator.cs" />
@@ -272,7 +281,9 @@
     <Compile Include="Assets\Doozy\Engine\UI\Base\UIComponentBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetRawImage.cs" />
+    <Compile Include="Assets\_Player\Scripts\Slide.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\DropdownPropertyDrawer.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\Animation\UIAnimatorConstants.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\HSL.cs" />
     <Compile Include="Assets\Doozy\Engine\SceneManagement\SceneLoader.cs" />
@@ -326,6 +337,7 @@
     <Compile Include="Assets\Doozy\Engine\UI\Base\Enums\NamesDatabaseType.cs" />
     <Compile Include="Assets\Doozy\Engine\Touchy\TouchySettings.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Connections\PassthroughConnection.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\DropdownAttribute.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewListener.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UICanvas\UICanvas.cs" />
     <Compile Include="Assets\Doozy\Engine\Touchy\TouchInfoEvent.cs" />
@@ -338,9 +350,10 @@
     <Compile Include="Assets\_Player\Scripts\Data\Presentation.cs" />
     <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetTextMeshPro.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UICanvas\UICanvasSettings.cs" />
-    <Compile Include="Assets\_Player\Scripts\Data\PlayerManager.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupContentData.cs" />
     <Compile Include="Assets\Doozy\Engine\Nody\Models\Socket.cs" />
+    <Compile Include="Assets\_Player\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\DropdownAttributes\Core\Scripts\AdvancedReflection\ReflectionItemType.cs" />
     <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupQueueData.cs" />
     <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\XYZ.cs" />
     <Compile Include="Assets\Doozy\Engine\SceneManagement\ActiveSceneChangedEvent.cs" />

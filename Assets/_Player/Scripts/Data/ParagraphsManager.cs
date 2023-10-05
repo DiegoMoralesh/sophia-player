@@ -5,7 +5,7 @@ using System.Linq;
 
 public class ParagraphsManager : MonoBehaviour
 {
-    PlayerManager player;
+    PlayerManagerPrueba player;
     public Paragraphs[] paragraphs;
     Sprite auxSprite;
     AudioClip auxAudio;
@@ -13,7 +13,7 @@ public class ParagraphsManager : MonoBehaviour
 
     private void Start()
     {
-        player = GetComponent<PlayerManager>();
+        player = GetComponent<PlayerManagerPrueba>();
     }
 
     public IEnumerator fill()
@@ -39,7 +39,7 @@ public class ParagraphsManager : MonoBehaviour
         }
 
         player.ready = true;
-        GameObject.Find("SlideManager").GetComponent<SophiaPlayer.PlayerManager>().fillData(slides);
+        FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
     }
 
     public IEnumerator getImageFromUrl(string url)
