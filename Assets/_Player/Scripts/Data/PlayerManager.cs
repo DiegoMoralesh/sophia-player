@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Presentation presentaion;
+    public Presentation presentation;
 
     [SerializeField] AudioSource source;
     [SerializeField] Image image;
@@ -30,8 +30,8 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(TransformTime(timer));
         Debug.Log("Play");
 
-        source.PlayOneShot(presentaion.slide[0].audio);
-        image.sprite = presentaion.slide[0].image;
+        source.PlayOneShot(presentation.slide[0].audio);
+        image.sprite = presentation.slide[0].image;
     }
 
     private string TransformTime(float time)

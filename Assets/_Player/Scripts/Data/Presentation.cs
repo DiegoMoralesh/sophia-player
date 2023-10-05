@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class Presentation
 {
-    public List<Slide> slide;
+    public List<SlideData> slide;
 }
 
 [System.Serializable]
-public class Slide
+public class SlideData
 {
     public string content;
     public string[] keyPhrase;

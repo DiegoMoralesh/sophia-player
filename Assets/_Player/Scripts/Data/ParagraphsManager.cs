@@ -9,6 +9,7 @@ public class ParagraphsManager : MonoBehaviour
     public Paragraphs[] paragraphs;
     Sprite auxSprite;
     AudioClip auxAudio;
+    public List<SlideData>  slides; 
 
     private void Start()
     {
@@ -17,8 +18,8 @@ public class ParagraphsManager : MonoBehaviour
 
     public IEnumerator fill()
     {
-        Presentation p = player.presentaion;
-        p.slide = new List<Slide>();
+        //Presentation p = player.presentation;
+        slides = new List<SlideData>();
 
         for (int i = 0; i < paragraphs.Length; i++)
         {
@@ -34,10 +35,11 @@ public class ParagraphsManager : MonoBehaviour
             slide.layout = "";
             slide.color = "";
 
-            p.slide.Add(slide);
+            slides.Add(slideData);
         }
 
         player.ready = true;
+        GameObject.Find("SlideManager").GetComponent<SophiaPlayer.PlayerManager>().fillData(slides);
     }
 
     public IEnumerator getImageFromUrl(string url)
