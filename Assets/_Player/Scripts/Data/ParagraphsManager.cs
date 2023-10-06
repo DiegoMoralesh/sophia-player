@@ -40,6 +40,8 @@ public class ParagraphsManager : MonoBehaviour
 
         player.ready = true;
         FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
+        player.ready = true;//GameObject.Find("SlideManager").GetComponent<SophiaPlayer.PlayerManager>().fillData(slides);
+        FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
     }
 
     public IEnumerator getImageFromUrl(string url)
