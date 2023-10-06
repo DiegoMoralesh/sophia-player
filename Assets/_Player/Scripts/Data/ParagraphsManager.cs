@@ -38,10 +38,10 @@ public class ParagraphsManager : MonoBehaviour
             slides.Add(slide);
         }
 
+        
+        //FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
         player.ready = true;
-        FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
-        player.ready = true;//GameObject.Find("SlideManager").GetComponent<SophiaPlayer.PlayerManager>().fillData(slides);
-        FindObjectOfType<SophiaPlayer.PlayerManager>().fillData(slides);
+        GameObject.Find("SlideManager").GetComponent<SophiaPlayer.PlayerManager>().fillData(slides);
     }
 
     public IEnumerator getImageFromUrl(string url)
