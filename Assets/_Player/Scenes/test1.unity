@@ -12399,10 +12399,6 @@ PrefabInstance:
       propertyPath: controls
       value: 
       objectReference: {fileID: 93031465}
-    - target: {fileID: 7930644586233354871, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
-      propertyPath: prefabKeyPhrase
-      value: 
-      objectReference: {fileID: 1927924603441386563, guid: 6006b1af6c84dec498f81bc289aa9dc6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12595,7 +12591,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 2
