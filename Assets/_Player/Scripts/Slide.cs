@@ -12,21 +12,39 @@ namespace SophiaPlayer
         public TMP_Text mainText;
         public AudioSource audio;
         public Image picture;
-        private List<Dictionary<int, string>> keyPhrase = new List<Dictionary<int, string>>();
+        public List<double> segPhrase;
+        public string[] keyPhrase;
+        private int index = 0;
 
-        public void setData(SlideData sd) {
+        public void setData(SlideData sd, List<double> segPhrase) {
             text.text = sd.content;
             picture.sprite = sd.image;
             audio.clip = sd.audio;
-            //keyPhrase = sd.keyPhrase;
+            this.segPhrase = segPhrase;
+            keyPhrase = sd.keyPhrase;
+            mainText.enabled = false;
         }
 
         private void Update()
         {
             if (audio.isPlaying)
             {
-                float tiempoActual = audio.time;
+                float actualTime = audio.time;
+
+                if (keyPhrase.Length > index)
+                {
+                    if (segPhrase[index]+1 <= actualTime)
+                    {
+                        FindObjectOfType<PlayerManager>().ShowKeyPhrase(mainText.transform, keyPhrase[index]);
+                        index++;
+                    }
+                }
             }
+        }
+
+        private void OnDisable()
+        {
+            index = 0;
         }
     }
 }
