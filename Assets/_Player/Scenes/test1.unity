@@ -12295,6 +12295,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlideManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6240399828885814268, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240399828885814268, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240399828885814268, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 7339904734140273512, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -12403,6 +12415,18 @@ PrefabInstance:
       propertyPath: prefabKeyPhrase
       value: 
       objectReference: {fileID: 1927924603441386563, guid: 6006b1af6c84dec498f81bc289aa9dc6, type: 3}
+    - target: {fileID: 8007940007738475315, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 420045011}
+    - target: {fileID: 8007940007738475315, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8007940007738475315, guid: 1541cc11733d53e4fb495a6b5b35436d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

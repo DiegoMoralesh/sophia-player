@@ -4,7 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,8 +26,9 @@ namespace SophiaPlayer
             play.onClick.AddListener(playClick);
         }
 
-        public void fillData(List<SlideData> sd) {
-            
+        public void fillData(List<SlideData> sd)
+        {
+
             foreach (SlideData d in sd)
             {
                 intaziateSlide(d);
@@ -75,12 +76,33 @@ namespace SophiaPlayer
             }
         }
 
+        public void Resize(GameObject s, SlideData sd)
+        {
+
+            // 1.) proporcion original de la imagen 
+            float widhtImage = sd.image.rect.width;
+            float heightImage = sd.image.rect.height;
+            float proporcion = widhtImage / heightImage;
+
+
+            foreach (Transform child in s.transform)
+            {
+                if (child.tag == "Picture")
+                {
+                    //ajuste de aspect ratio fitter del slide actual segun la proporcion original de la imagen
+                    child.gameObject.GetComponent<AspectRatioFitter>().aspectRatio = proporcion;
+                }
+            }
+
+            //slides.Add(s);
+        }
         void intaziateSlide(SlideData sd)
         {
             var value = RandomEnumValue<ThemeManager.LayoutEnum>();
 
-            GameObject s = GameObject.Instantiate((UnityEngine.GameObject)Resources.Load("Layout/Style1/"+value.ToString()), Vector3.zero, Quaternion.identity, transform);
+            GameObject s = GameObject.Instantiate((UnityEngine.GameObject)Resources.Load("Layout/Style1/" + value.ToString()), Vector3.zero, Quaternion.identity, transform);
             s.GetComponent<Slide>().setData(sd, KeyPhrase(sd));
+            Resize(s, sd);
             slides.Add(s);
         }
 
@@ -92,7 +114,7 @@ namespace SophiaPlayer
 
         List<double> KeyPhrase(SlideData sd)
         {
-            List<double> segPhrase = new List<double>(); 
+            List<double> segPhrase = new List<double>();
             for (int x = 0; x < sd.keyPhrase.Length; x++)
             {
                 string[] phraseSplit = sd.keyPhrase[x].Split(' ');
@@ -102,13 +124,13 @@ namespace SophiaPlayer
                 s.seg = 0;
 
                 for (int i = 0; i < sd.srt.Length; i++)
-                {  
+                {
                     if (sd.srt[i].text.Equals(phraseSplit[0], StringComparison.OrdinalIgnoreCase))
                     {
                         string aux = "";
                         for (int e = 0; e < phraseSplit.Length; e++)
                         {
-                            aux += sd.srt[i + e].text+" ";
+                            aux += sd.srt[i + e].text + " ";
                         }
 
                         double similarity = CalculateSimilarity(aux, sd.keyPhrase[x]);
@@ -116,7 +138,7 @@ namespace SophiaPlayer
 
                         if (similarity >= similarityThreshold)
                         {
-                            if(s.grade < similarity)
+                            if (s.grade < similarity)
                             {
                                 s.grade = similarity;
                                 s.text = sd.keyPhrase[x];
@@ -167,7 +189,7 @@ namespace SophiaPlayer
         }
 
         [SerializeField] GameObject prefabKeyPhrase;
-            
+
         public void ShowKeyPhrase(Transform content, string phrase)
         {
             TMP_Text TMPtext = GameObject.Instantiate(prefabKeyPhrase, content).GetComponent<TMP_Text>();

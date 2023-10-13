@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 5479544645253805985}
   m_Layer: 0
   m_Name: Picture
-  m_TagString: Untagged
+  m_TagString: Picture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1327,6 +1327,8 @@ MonoBehaviour:
   mainText: {fileID: 7800282339562302200}
   audio: {fileID: 5172861026485216298}
   picture: {fileID: 776402932090805086}
+  segPhrase: []
+  keyPhrase: []
 --- !u!82 &5172861026485216298
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1485,7 +1487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1067, y: 0}
+  m_AnchoredPosition: {x: 655, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5537452124016126952

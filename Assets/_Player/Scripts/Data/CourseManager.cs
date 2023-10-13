@@ -9,11 +9,10 @@ public class CourseManager : MonoBehaviour
 {
     public Course course;
     public CourseSections section;
-    public string titleSearch = "Introducciï¿½n.";
+    public string titleSearch = "Introducción.";
 
     private void Start()
     {
-        Debug.Log("hello");
         //Llama el url de la api - por pruebas de momento esta asi 
         StartCoroutine(LoadCourseCoroutine("https://sophie-qa-api.azurewebsites.net/api/Courses/fac5b047-fbd8-4728-9a71-b316a241f2ac"));
     }
